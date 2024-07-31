@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+* {
+    background-color: #15181B;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1150px;
+    margin: auto;
+}
+
+.top {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+
+.feature {
+    position: relative;
+    width: 150px;
+    height: 45px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    margin-right: 30px;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+.feature:hover {
+    border-radius: 40px;
+    transform: scale(1.1);
+}
+
+.feature i {
+    background-color: gray;
+    margin-right: 15px;
+    color: black;
+    font-size: 35px;
+}
+
+.feature h3 {
+    background-color: gray;
+    color: black;
+}
+
+.feature::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%; /* Position the tooltip below the feature */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 3px 5px; /* Smaller padding */
+    border-radius: 3px; /* Smaller border radius */
+    font-size: 12px; /* Smaller font size */
+    font-family: "Roboto", sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    margin-top: 5px; /* Less space between the icon and the tooltip */
+}
+
+.feature:hover::after {
+    opacity: 1;
+}
+
+.header p {
+    text-align: center;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.headshot {
+    border-radius: 50%;
+    width: 350px;
+    box-shadow: rgba(206, 206, 206, 0.2) 0px 7px 29px 0px;
+    margin-right: 150px;
+}
+
+.tech-icons {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-icons i, .icon-wrapper {
+    font-size: 3rem; /* Adjust icon size */
+    animation: float 3s ease-in-out infinite;
+    padding: 15px 15px;
+    background-color: #060606;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+}
+
+.tech-icons i::after, .icon-wrapper::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%; /* Position the tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 3px 5px; /* Smaller padding */
+    border-radius: 3px; /* Smaller border radius */
+    font-size: 12px; /* Smaller font size */
+    font-family: "Roboto", sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    margin-top: 5px; /* Less space between the icon and the tooltip */
+}
+
+.tech-icons i:hover::after, .icon-wrapper:hover::after {
+    opacity: 1;
+}
+
+.icon-wrapper {
+    display: inline-block;
+    width: 50px; /* Adjust width to match other icons */
+    height: 50px; /* Adjust height to match other icons */
+    background-color: #060606;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+}
+.icon-wrapper img{
+    background-color: rgba(206, 206, 206, 0);
+    width: 50px;
+    height: 50px;
+}
+
+.icon-wrapper img {
+    object-fit: contain; /* Ensure the image fits within the container */
+}
+
+.tech-icons i:nth-child(1) {
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+.tech-icons i:nth-child(2) {
+    animation-duration: 3.5s;
+    animation-delay: -0.5s;
+}
+
+.tech-icons i:nth-child(3) {
+    animation-duration: 4.5s;
+    animation-delay: -1s;
+}
+
+.tech-icons i:nth-child(4) {
+    animation-duration: 4s;
+    animation-delay: -1.5s;
+}
+
+.tech-icons i:nth-child(5) {
+    animation-duration: 3.8s;
+    animation-delay: -2s;
+}
+
+.tech-icons i:nth-child(6) {
+    animation-duration: 4.2s;
+    animation-delay: -2.5s;
+}
+
+.text {
+    margin-left: 50px;
+    font-size: 35px;
+}
+
+.title {
+    font-size: 25px;
+    margin: auto;
+    text-align: right;
+    font-size: 55px;
+    right: 50;
+}
+
+.green {
+    color: #00FF85;
+}
+
+.blue {
+    color: #0066FF;
+}
+
+.title-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    width: 1000px;
+    height: 500px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust floating distance */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
