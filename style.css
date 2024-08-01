@@ -24,6 +24,24 @@
 .icons {
     display: flex;
     gap: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    
+}
+
+.icons a{
+    text-decoration: none;
+    transition-duration: .2s;
+}
+
+.icons a:hover{
+    transform: scale(1.1);
+}
+.icons i{
+    transition-duration: .2s;
+}
+.icons i:hover{
+    transform: scale(1.1);
 }
 
 .features {
@@ -158,6 +176,9 @@
     height: 50px;
 }
 
+#center{
+    text-align: center;
+}
 .icon-wrapper img {
     object-fit: contain; /* Ensure the image fits within the container */
 }
@@ -213,6 +234,48 @@
     color: #0066FF;
 }
 
+.projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 50px; /* Adjust the gap between grid items if needed */
+    margin-left: 30px;
+
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: center;
+    background-color: rgb(60, 59, 59);
+    color: white;
+    padding: 20px 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+.project:hover{
+    transform: scale(1.1) rotate(0deg) !important;
+}
+.project img{
+    width: 400px;
+    background-color: rgb(60, 59, 59);
+    border-radius: 10px;
+}
+.project h1{
+    background-color: rgb(60, 59, 59);
+    color: white;
+}
+.project p{
+    background-color: rgb(60, 59, 59);
+    color: white;
+}
+
+#iphone{
+    width: 150px;
+    text-align: center;
+    margin: auto;
+}
 .title-div {
     display: flex;
     justify-content: center;
